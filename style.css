@@ -1,0 +1,134 @@
+h1,h2,h3,h4,h5,h6,p 
+{
+  margin: 0;
+}
+body 
+{
+  margin: 0px;
+  background: conic-gradient(rgb(227, 253, 141),rgb(252, 255, 86),rgb(255, 150, 234),rgb(126, 197, 255),rgb(159, 255, 173),rgb(227, 253, 141));
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: clamp(15px,1vw,25px);
+}
+header 
+{
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  animation: shiftColor;
+  animation-timeline: scroll(y);
+  background-color: rgb(255, 0, 204);
+  background: repeating-linear-gradient(90deg,rgba(0,0,0,0) 0 10px,rgba(255,255,255,0.5) 12px 20px);
+  width: calc(100vw - 20px);
+  height: auto;
+  padding: 10px 10px 0 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav 
+{
+    background-color: white;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+    width: 100vw;
+    height: 15px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+main 
+{
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  padding: 20px;
+  gap: 20px;
+  grid-template-areas:
+    "intro intro assignment"
+    "intro intro assignment"
+    "one two three"
+    "four four four";
+}
+
+footer 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 40px;
+  border-top: 5px solid white;
+  background: repeating-linear-gradient(90deg,rgba(0,0,0,0) 0 10px, rgba(255,255,255,0.5) 12px 20px);
+  background-color: white;
+  animation: shiftColor;
+  animation-timeline: scroll(y);
+}
+
+a:hover 
+{
+  animation: shiftColor;
+  animation-timeline: scroll(y);
+}
+
+section 
+{
+  padding: 10px;
+  background-color: rgb(255,255,255);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+@keyframes shiftColor 
+{
+  from 
+  {
+    background-color: rgb(255, 0, 204);
+  } to 
+  {
+    background-color: rgb(0, 140, 255);
+  }
+}
+
+section:hover 
+{
+  animation: scale 500ms linear alternate infinite;
+}
+
+@keyframes scale 
+{
+  from 
+  {
+    transform: scale(1,1);
+  }
+  to 
+  {
+    transform: scale(1.02,1.02);
+  }
+}
+
+@media (max-width: 1000px) 
+{
+  main 
+  {
+    grid-template-areas:
+      "intro"
+      "assignment"
+      "one"
+      "two"
+      "three"
+      "four";
+  }
+}
