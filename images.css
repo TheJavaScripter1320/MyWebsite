@@ -1,61 +1,115 @@
-body {
+h1,h2,h3,h4,h5,h6,p 
+{
+  margin: 0;
+}
+body 
+{
   margin: 0px;
-  display: flex;
-  flex-wrap: wrap;
-  background: linear-gradient(red,orange,yellow,green,blue,indigo,violet);
+  background: conic-gradient(rgb(227, 253, 141),rgb(252, 255, 86),rgb(255, 150, 234),rgb(126, 197, 255),rgb(159, 255, 173),rgb(227, 253, 141));
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-}
-main 
-{
-  width: 100vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: clamp(15px,1vw,25px);
 }
-header,footer
+header 
 {
-  width: 100vw;
-  background-color: rgba(255,255,255,0.90);
-  padding: 10px;
-  text-align: center;
-  box-shadow: 0 0 25px rgba(0,0,0,0.75);
-  text-shadow: 0 0 10px rgba(255,0,0,7.5);
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  animation: shiftColor;
+  animation-timeline: scroll(y);
+  background-color: rgb(255, 0, 204);
+  background: repeating-linear-gradient(90deg,rgba(0,0,0,0) 0 10px,rgba(255,255,255,0.5) 12px 20px);
+  width: calc(100vw - 20px);
+  height: auto;
+  padding: 10px 10px 0 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
+
 nav 
 {
-  box-shadow: 0 0 25px rgba(0,249,250,0.75);
-  background-color: rgba(0, 220, 205,0.5);
-  padding: 5px;
-  border-radius: 10px;
-
-}
-section 
-{
-  width: 300px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.75);
-  padding: 5px;
-  border-radius: 10px;
   background-color: white;
-  margin: 15px 0px;
-  border: 5px ridge black;
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  width: 100vw;
+  height: 15px;
+  margin: 0;
+  padding: 10px 0;
 }
-nav a 
+
+main 
 {
-  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+footer 
+{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 40px;
+  border-top: 5px solid white;
+  background: repeating-linear-gradient(90deg,rgba(0,0,0,0) 0 10px, rgba(255,255,255,0.5) 12px 20px);
+  background-color: white;
+  animation: shiftColor;
+  animation-timeline: scroll(y);
+}
+
 a:hover 
 {
-  opacity: 75%;
-  color: purple;
+  animation: shiftColor;
+  animation-timeline: scroll(y);
 }
-img 
+
+section 
 {
-  border: 3px solid red;
-  margin: 5px;
-  padding: 25px;
+  padding: 5px;
+  background-color: rgb(255,255,255);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
-.NOPADDING 
+
+@keyframes shiftColor 
 {
-  padding: 0;
+  from 
+  {
+    background-color: rgb(255, 0, 204);
+  } to 
+  {
+    background-color: rgb(0, 140, 255);
+  }
+}
+
+section:hover 
+{
+  animation: scale 500ms linear alternate infinite;
+}
+
+@keyframes scale 
+{
+  from 
+  {
+    transform: scale(1,1);
+  }
+  to 
+  {
+    transform: scale(1.02,1.02);
+  }
 }
