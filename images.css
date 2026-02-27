@@ -20,8 +20,6 @@ header
   position: sticky;
   top: 0px;
   left: 0px;
-  animation: shiftColor;
-  animation-timeline: scroll(y);
   background-color: rgb(255, 0, 204);
   background: repeating-linear-gradient(90deg,rgba(0,0,0,0) 0 10px,rgba(255,255,255,0.5) 12px 20px);
   width: calc(100vw - 20px);
@@ -68,8 +66,6 @@ footer
   border-top: 5px solid white;
   background: repeating-linear-gradient(90deg,rgba(0,0,0,0) 0 10px, rgba(255,255,255,0.5) 12px 20px);
   background-color: white;
-  animation: shiftColor;
-  animation-timeline: scroll(y);
 }
 
 a:hover 
