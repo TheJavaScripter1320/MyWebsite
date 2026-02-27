@@ -54,7 +54,7 @@ main
   display: grid;
   grid-auto-rows: auto;
   grid-auto-columns: auto;
-  padding: 20px;
+  padding: 10px;
   gap: 10px;
   grid-template-areas:
     "adobe intro assignment"
