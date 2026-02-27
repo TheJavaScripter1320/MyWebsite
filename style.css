@@ -57,8 +57,9 @@ main
   padding: 10px;
   gap: 10px;
   grid-template-areas:
-    "adobe intro assignment"
-    "adobe intro assignment"
+    "adobe adobe adobe"
+    "intro intro assignment"
+    "intro intro assignment"
     "one two three"
     "four four four";
 }
