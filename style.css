@@ -62,11 +62,12 @@ main
     "intro intro assignment"
     "one two three"
     "four four four";
+  margin-bottom: 45px;
 }
 
 footer 
 {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   display: flex;
   justify-content: center;
