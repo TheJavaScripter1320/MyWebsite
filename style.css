@@ -55,7 +55,7 @@ main
   grid-auto-rows: auto;
   grid-auto-columns: auto;
   padding: 20px;
-  gap: 20px;
+  gap: 10px;
   grid-template-areas:
     "adobe intro assignment"
     "adobe intro assignment"
@@ -87,7 +87,7 @@ a:hover
 
 section 
 {
-  padding: 10px;
+  padding: 5px;
   background-color: rgb(255,255,255);
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
