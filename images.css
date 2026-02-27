@@ -55,6 +55,9 @@ main
 
 footer 
 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: fixed;
   bottom: 0;
   display: flex;
